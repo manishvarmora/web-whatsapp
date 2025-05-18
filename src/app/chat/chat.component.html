@@ -1,0 +1,7 @@
+<div class="app">
+<div class="app-content">
+  <app-sidebar style="display: flex;"></app-sidebar>
+  <app-home *ngIf="!chatId"></app-home>
+  <app-messages *ngIf="chatId"></app-messages>
+</div>
+</div>

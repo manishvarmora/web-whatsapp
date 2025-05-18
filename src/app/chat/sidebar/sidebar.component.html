@@ -1,0 +1,40 @@
+<aside class="sidebar">
+  <header class="header">
+    <div class="sidebar__avatar-wrapper">
+      <img src="assets/images/profile-picture-girl-1.jpeg" alt="Karen Okonkwo" class="avatar" />
+    </div>
+    <div class="sidebar__actions">
+      <button class="sidebar__action" aria-label="Status">
+        <svg-icon src="assets/icons/wa-status.svg" svgClass="icon-class"></svg-icon>
+      </button>
+      <button class="sidebar__action" aria-label="Chat">
+        <svg-icon src="assets/icons/wa-chat.svg" svgClass="icon-class"></svg-icon>
+      </button>
+      <button class="sidebar__action" aria-label="Menu">
+        <svg-icon src="assets/icons/menu.svg" svgClass="icon-class"></svg-icon>
+      </button>
+    </div>
+  </header>
+  <div class="sidebar__alert sidebar__alert--info">
+		<div class="sidebar__alert-icon-wrapper">
+      <svg-icon src="assets/icons/notification.svg" style="color: white;" svgClass="icon-class"></svg-icon>
+		</div>
+		<div class="sidebar__alert-texts">
+			<p class="sidebar__alert-text"> Get notified of new messages </p>
+			<p class="sidebar__alert-text"> Turn on your notifications </p>
+		</div>
+	</div>
+  <div class="search-wrapper">
+    <div class="search-icons">
+      <svg-icon src="assets/icons/search.svg" svgClass="search-icon"></svg-icon>
+      <button class="search__back-btn">
+        <svg-icon src="assets/icons/back-arrow.svg" svgClass="back-arrow-icon"></svg-icon>
+      </button>
+    </div>
+    <input class="search" placeholder="Search or start a new chat" />
+  </div>
+  <div class="sidebar__contacts">
+    <app-contact></app-contact>
+  </div>
+
+</aside>

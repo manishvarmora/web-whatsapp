@@ -1,0 +1,114 @@
+<div class="chat">
+  <div class="chat__body">
+    <div class="chat__bg"></div>
+
+    <header class="header chat__header">
+			<div class="chat__avatar-wrapper" onClick="">
+				<img src="assets/images/profile-picture-girl-1.jpeg" alt="Karen Okonkwo" class="avatar" />
+			</div>
+
+			<div class="chat__contact-wrapper" onClick="">
+				<h2 class="chat__contact-name"> Karen Okonkwo</h2>
+				<p class="chat__contact-desc"> online </p>
+			</div>
+			<div class="chat__actions">
+				<button class="chat__action" aria-label="Search" onClick="" >
+          <svg-icon src="assets/icons/search.svg" id="search" class="chat__action-icon chat__action-icon--search"></svg-icon>
+				</button>
+        <div class="pos-rel">
+          <button aria-label={ariaLabel} class="options-btn  chat__action" onClick="" >
+            <svg-icon src="assets/icons/menu.svg" id="Menu" class="options-btn  chat__action-icon"></svg-icon>
+          </button>
+          <ul class="options-btn__options options-btn__options--right" >
+              <li class="options-btn__option" key="">
+                option
+              </li>
+          </ul>
+        </div>
+			</div>
+		</header>
+
+    <div class="chat__content">
+      <div key={dateIndex}>
+				<div class="chat__date-wrapper">
+					<span class="chat__date"> </span>
+				</div>
+
+					<p class="chat__encryption-msg">
+						<!-- <Icon id="lock" class="chat__encryption-icon" /> -->
+						Messages are end-to-end encrypted. No one outside of this chat, not
+						even WhatsApp, can read or listen to them. Click to learn more.
+					</p>
+
+				<div class="chat__msg-group">
+
+				</div>
+			</div>
+    </div>
+
+    <footer class="chat__footer">
+      <button class="chat__scroll-btn" aria-label="scroll down" onClick="" >
+        <svg-icon id="downArrow" src="assets/icons/down-arrow.svg" svgClass="icon-class"></svg-icon>
+      </button>
+      <!-- <EmojiTray
+        showEmojis={showEmojis}
+        newMessage={newMessage}
+        setNewMessage={setNewMessage}
+      /> -->
+
+      <!-- chat input -->
+      <div class="chat__input-wrapper">
+          <button aria-label="Close emojis" onClick="">
+            <!-- <Icon id="cancel" class="chat__input-icon" /> -->
+          </button>
+        <button aria-label="Emojis" onClick="">
+          <svg-icon id="smiley" src="assets/icons/smiley.svg" svgClass="chat__input-icon"></svg-icon>
+        </button>
+
+            <button aria-label="Choose GIF">
+              <!-- <Icon id="gif" class="chat__input-icon" /> -->
+            </button>
+            <button aria-label="Choose sticker">
+              <!-- <Icon id="sticker" class="chat__input-icon" /> -->
+            </button>
+
+        <div class="pos-rel">
+          <button aria-label="Attach" onClick="">
+            <svg-icon id="attach" src="assets/icons/attach.svg" svgClass="chat__input-icon"></svg-icon>
+          </button>
+
+          <div class="chat__attach chat__attach--active" >
+              <button class="chat__attach-btn" aria-label="" key="" >
+                <!-- <Icon id={btn.icon} class="chat__attach-icon" /> -->
+              </button>
+          </div>
+        </div>
+        <input class="chat__input" placeholder="Type a message" value="" onChange="" onKeyDown="" />
+
+          <!-- <button aria-label="Send message" onClick="">
+            <svg-icon id="send" src="assets/icons/send.svg" svgClass="chat__input-icon"></svg-icon>
+          </button> -->
+
+          <button aria-label="Record voice note">
+            <svg-icon id="microphone" src="assets/icons/microphone.svg" svgClass="chat__input-icon"></svg-icon>
+          </button>
+
+      </div>
+    </footer>
+  </div>
+  <!-- <ChatSidebar
+    heading="Search Messages"
+    active={showSearchSidebar}
+    closeSidebar={() => setShowSearchSidebar(false)}
+  >
+    <Search />
+  </ChatSidebar> -->
+
+  <!-- <ChatSidebar
+    heading="Contact Info"
+    active={showProfileSidebar}
+    closeSidebar={() => setShowProfileSidebar(false)}
+  >
+    <Profile user={user} />
+  </ChatSidebar> -->
+</div>
