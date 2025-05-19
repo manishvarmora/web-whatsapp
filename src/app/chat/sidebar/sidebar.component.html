@@ -10,9 +10,20 @@
       <button class="sidebar__action" aria-label="Chat">
         <svg-icon src="assets/icons/wa-chat.svg" svgClass="icon-class"></svg-icon>
       </button>
-      <button class="sidebar__action" aria-label="Menu">
+      <!-- <button class="sidebar__action" aria-label="Menu">
         <svg-icon src="assets/icons/menu.svg" svgClass="icon-class"></svg-icon>
-      </button>
+      </button> -->
+      <div class="pos-rel">
+        <button aria-label="Menu" class="options-btn sidebar__action" [ngClass]="{ 'options-btn--pressed': sidebarShowOptions }" (click)="sidebarShowOptions = !sidebarShowOptions" >
+          <svg-icon src="assets/icons/menu.svg" class="options-btn sidebar__action-icon"></svg-icon>
+        </button>
+
+        <ul class="options-btn__options" [ngClass]="{ 'options-btn__options--active': sidebarShowOptions, 'options-btn__options--right': position === 'right' }" >
+          <li class="options-btn__option" *ngFor="let option of sidebarOptions" (click)="onOptionClick(option)" >
+            {{ option }}
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   <div class="sidebar__alert sidebar__alert--info">

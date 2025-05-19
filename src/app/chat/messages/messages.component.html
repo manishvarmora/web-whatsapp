@@ -16,15 +16,17 @@
           <svg-icon src="assets/icons/search.svg" id="search" class="chat__action-icon chat__action-icon--search"></svg-icon>
 				</button>
         <div class="pos-rel">
-          <button aria-label={ariaLabel} class="options-btn  chat__action" onClick="" >
-            <svg-icon src="assets/icons/menu.svg" id="Menu" class="options-btn  chat__action-icon"></svg-icon>
+          <button aria-label="Options" class="options-btn chat__action" [ngClass]="{ 'options-btn--pressed': chatShowOptions }" (click)="chatShowOptions = !chatShowOptions" >
+            <svg-icon src="assets/icons/menu.svg" class="options-btn chat__action-icon"></svg-icon>
           </button>
-          <ul class="options-btn__options options-btn__options--right" >
-              <li class="options-btn__option" key="">
-                option
-              </li>
+
+          <ul class="options-btn__options" [ngClass]="{ 'options-btn__options--active': chatShowOptions, 'options-btn__options--right': position === 'right' }" >
+            <li class="options-btn__option" *ngFor="let option of chatOptions" (click)="onOptionClick(option)" >
+              {{ option }}
+            </li>
           </ul>
         </div>
+
 			</div>
 		</header>
 

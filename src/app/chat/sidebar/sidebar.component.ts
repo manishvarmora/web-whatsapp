@@ -10,5 +10,12 @@ import { ActivatedRoute } from '@angular/router';
 
 })
 export class SidebarComponent {
+  sidebarShowOptions = false;
+  sidebarOptions = ['New group', 'Starred Messages', 'Profile', 'Settings', 'Log out']; // Replace with your options
+  position = 'left'; // or 'right
 
+  onOptionClick(option: string) {
+    console.log('Selected:', option);
+    this.sidebarShowOptions = false;
+  }
 }
